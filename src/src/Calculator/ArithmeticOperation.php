@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Calculator;
+
+interface ArithmeticOperation
+{
+    /**
+     * @param float $operand1
+     * @param float $operand2
+     * @return float
+     */
+    public function execute(float $operand1, float $operand2): float;
+}
