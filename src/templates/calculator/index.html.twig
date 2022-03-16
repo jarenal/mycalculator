@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4 text-center">
+                <h2>Calculator</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                {{ form(form) }}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <label for="result" class="form-label">Result</label>
+                <input id="calculator_result" type="text" name="result" class="form-control" value="{{ result }}"/>
+            </div>
+        </div>
+        {% if error_message %}
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <div class="alert alert-danger" role="alert">
+                    {{ error_message }}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+{% endblock %}
